@@ -1,7 +1,9 @@
 # License : GPLv2.0
 # copyright (c) 2023  Dave Bailey
+# copyright (c) 2026  Dipsha Biswas
 # Author: Dave Bailey (dbisu, @daveisu)
-# Pico and Pico W board support
+# fork by Dipsha Biswas (21-0075-disha)
+# Support for Vicharak Shrike Lite, Pico & Pico W
 
 from board import *
 import board
@@ -36,11 +38,16 @@ noStorageStatus = noStoragePin.value
 # Pico W:
 #   GP15 not connected == USB NOT visible
 #   GP15 connected to GND == USB visible
+
+# Vicharak Shrike Lite:
+#   GP15 not connected == USB visible
+#   GP15 connected to GND == USB not visible
 if exfil_enabled:
     if not loot_exists:
         storage.disable_usb_drive()
 if(board.board_id == 'raspberry_pi_pico' or board.board_id == 'raspberry_pi_pico2'):
     # On Pi Pico, default to USB visible
+    # TODO: new board_id = "vicharak_shrike_lite"
     noStorage = not noStorageStatus
 elif(board.board_id == 'raspberry_pi_pico_w' or board.board_id == 'raspberry_pi_pico2_w'):
     # on Pi Pico W, default to USB hidden by default
