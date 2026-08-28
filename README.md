@@ -154,7 +154,7 @@ If you need the pico-ducky to not show up as a USB mass storage device for steal
 - Enter setup mode.    
 - Copy your payload script to the pico-ducky.  
 - Disconnect the pico from your host PC.
-- Connect a jumper wire between pin 18 (`GND`) and pin 20 (`GPIO15`).  
+- Connect a jumper wire between pin (`GND`) and pin IO15 (`GPIO15`).  
 This will prevent the pico-ducky from showing up as a USB drive when plugged into the target computer.  
 - Remove the jumper and reconnect to your PC to reprogram.  
 
@@ -244,7 +244,7 @@ keycode_win_de.mpy
 
 ## Useful links and resources
 
-### How to recover your Pico if it becomes corrupted or doesn't boot.
+### How to recover your RP2040 / RP2350 board if it becomes corrupted or doesn't boot.
 
 [Reset Instructions](RESET.md)
 
