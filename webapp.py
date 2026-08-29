@@ -1,7 +1,11 @@
 # License : GPLv2.0
 # copyright (c) 2023  Dave Bailey
+# copyright (c) 2026  Dipsha Biswas
 # Author: Dave Bailey (dbisu, @daveisu)
+# fork by Dipsha Biswas (21-0075-disha)
 # FeatherS2 board support
+# Support for Vicharak Shrike Lite, Pico & Pico W
+
 
 import socketpool
 import time
